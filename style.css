@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    background-color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    max-width: 1700px;
+}
+h1{
+    margin-bottom: 10px;
+    font-family: 'Big Shoulders Stencil Display';
+}
+#principal{
+    width: 100%;
+    height: 95vh;
+    background-image: url(./imagens/int.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+}
+#tela{
+    padding: 10px;
+    width: 300px;
+    height: 420px;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    border-radius: 20px;
+    margin: 20px auto;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#imagem{
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+input{
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;;
+    border: 1px solid gray;
+    text-align: center;
+    outline: none;
+}
+button{
+    font-family: 'Big Shoulders Stencil Display';
+    margin-bottom: 5px;
+    padding: 15px;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid gray;
+    transition-duration: 0.3s;
+    outline: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+button:hover{
+    color: white;
+    border: 1px solid black;
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.icons{
+    width: 35px;
+    height: 35px;
+}
+.leg-icon{
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+}
+.resultado{
+    margin: 5px auto 8px;
+    background-color: rgba(255, 255, 255, 0.568);
+    width: 150px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
