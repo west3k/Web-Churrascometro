@@ -21,18 +21,23 @@ function calcular() {
     let child = parseInt(criancas.value / 2)
     let duracao = parseInt(tempo.value)
 
-    let totalPessoas = adult + child
+    if (adultos != "" || criancas != "" || tempo != "") {
+        alert("Preencha todos os campos!")
+    } else {
+        let totalPessoas = adult + child
 
-    let totalCarne = (calcCarne(totalPessoas, duracao) / 1000).toFixed(2)
-    let totalCerveja = Math.ceil(calcCerveja(adult, duracao) / 330)
-    let totalBebidas = Math.ceil(calcBebidas(totalPessoas, duracao) / 2000)
+        let totalCarne = (calcCarne(totalPessoas, duracao) / 1000).toFixed(2)
+        let totalCerveja = Math.ceil(calcCerveja(adult, duracao) / 330)
+        let totalBebidas = Math.ceil(calcBebidas(totalPessoas, duracao) / 2000)
 
-    resultado.innerHTML =
-        `<img src="./imagens/icon-meat.png" class="icons"><p class="leg-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${totalCarne}KG</p> `
-    resultado1.innerHTML =
-        `&nbsp;&nbsp;<img src="./imagens/icon-beer.png" class="icons"><p class="leg-icon">${totalCerveja} Long Necks</p> `
-    resultado2.innerHTML =
-        `<img src="./imagens/icon-bottle-soda.png" class="icons"><p class="leg-icon">&nbsp;&nbsp;&nbsp;&nbsp;${totalBebidas} Garrafas</p> `
+        resultado.innerHTML =
+            `<img src="./imagens/icon-meat.png" class="icons"><p class="leg-icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${totalCarne}KG</p> `
+        resultado1.innerHTML =
+            `&nbsp;&nbsp;<img src="./imagens/icon-beer.png" class="icons"><p class="leg-icon">${totalCerveja} Long Necks</p> `
+        resultado2.innerHTML =
+            `<img src="./imagens/icon-bottle-soda.png" class="icons"><p class="leg-icon">&nbsp;&nbsp;&nbsp;&nbsp;${totalBebidas} Garrafas</p> `
+
+    }
 }
 
 function calcCarne(totalPessoas, duracao) {
@@ -54,5 +59,5 @@ function calcBebidas(totalPessoas, duracao) {
     if (duracao >= 6) {
         bebidas = 1500
     }
-    return  totalPessoas * bebidas 
+    return totalPessoas * bebidas
 }
