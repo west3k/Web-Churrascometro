@@ -21,11 +21,9 @@ function calcular() {
     let child = parseInt(criancas.value / 2)
     let duracao = parseInt(tempo.value)
 
-    if (adultos != "" || criancas != "" || tempo != "") {
-        alert("Preencha todos os campos!")
-    } else {
-        let totalPessoas = adult + child
+    let totalPessoas = adult + child
 
+    if (totalPessoas >= 1 && duracao >= 1) {
         let totalCarne = (calcCarne(totalPessoas, duracao) / 1000).toFixed(2)
         let totalCerveja = Math.ceil(calcCerveja(adult, duracao) / 330)
         let totalBebidas = Math.ceil(calcBebidas(totalPessoas, duracao) / 2000)
@@ -37,9 +35,11 @@ function calcular() {
         resultado2.innerHTML =
             `<img src="./imagens/icon-bottle-soda.png" class="icons"><p class="leg-icon">&nbsp;&nbsp;&nbsp;&nbsp;${totalBebidas} Garrafas</p> `
 
+    } else {
+        alert("Preencha todos os campos!")
     }
-}
 
+}
 function calcCarne(totalPessoas, duracao) {
     if (duracao >= 6) {
         carne = 650
